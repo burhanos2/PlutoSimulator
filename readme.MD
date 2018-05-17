@@ -1,8 +1,9 @@
 Space game, made by:
+
 Developers:
-Burhan 
+Burhan,
 Jamiro
 
 Artists:
-Luna 
+Luna, 
 Bryan
