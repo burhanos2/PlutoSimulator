@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
             print("check");
             Vector3 temp = transform.rotation.eulerAngles;
-            temp.z = 360.0f;
+            temp.z = 0.0f;
             transform.rotation = Quaternion.Euler(temp);
 
             if (collisionwall == true)

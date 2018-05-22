@@ -16,7 +16,6 @@ public class GunController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
 
         if (richting == 180)
         { 
@@ -24,15 +23,24 @@ public class GunController : MonoBehaviour {
 
         }
 
-        if (richting == 270)
+        else if (richting == 0 || richting == 360)
+        {
+
+            transform.position = new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z);
+        }
+
+        else if (richting == 270)
         {
 
             transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
         }
 
-        if (richting == 90)
+        else if (richting == 90)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
         }
+
+
+        
     }
 }
