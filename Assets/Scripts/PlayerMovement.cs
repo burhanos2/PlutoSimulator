@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
     public float speed;
     private float normalspeed;
     private bool rightUp;
     private bool leftUp;
     private bool collisionwall = false;
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         normalspeed = 50;
-        speed = speed - speed * 2;
+        speed = speed * -1;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
     
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+      
 
 
         if (Input.GetKey("left") && rightUp == false)
@@ -82,5 +85,6 @@ public class PlayerMovement : MonoBehaviour {
         }
         
     }
+
 
 }
