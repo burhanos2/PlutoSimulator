@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - select
-  - start
+  - test
+  - test1
   - 
   - 
   - 
@@ -38,15 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 2106615159
+    locked: 0
+  - name: test
+    uniqueID: 1389237465
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: selector
-    uniqueID: 1261694587
-    locked: 0
-  - name: start
-    uniqueID: 2703183843
-    locked: 0
-  - name: background
-    uniqueID: 411086419
     locked: 0
