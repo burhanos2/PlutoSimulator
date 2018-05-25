@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : PlayerMovement {
+public class BulletSpawner : PlayerMovement
+{
 
     public Transform firePoint;
     public GameObject Bullet;
@@ -17,7 +18,9 @@ public class Gun : PlayerMovement {
 
        
 
-        if (Input.GetKeyDown (KeyCode.Space))
+      //  if (Input.GetKeyDown (KeyCode.Space))
+
+        if(Input.GetKeyDown (KeyCode.X))
         {
             Instantiate(Bullet, firePoint.position, firePoint.rotation);
 

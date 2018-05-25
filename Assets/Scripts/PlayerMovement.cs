@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
             var x = Input.GetAxis("Horizontal") * Time.deltaTime * normalspeed;
             transform.Translate(x, 0, 0);
 
-            print("check");
             Vector3 temp = transform.rotation.eulerAngles;
             temp.z = 0.0f;
             transform.rotation = Quaternion.Euler(temp);
@@ -80,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.name == "wall")
         {
-            print("test");
+           
             collisionwall = true;
         }
         

@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunController : MonoBehaviour {
+public class BulletController : MonoBehaviour
+{
 
     public float richting;
     
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         richting = GameObject.Find("PlutoPlayer").transform.localEulerAngles.z;
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Destroy(gameObject, 0.8f);
 
         if (richting == 180)
         { 
@@ -39,8 +43,6 @@ public class GunController : MonoBehaviour {
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
         }
-
-
-        
+  
     }
 }
