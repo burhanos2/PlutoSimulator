@@ -107,9 +107,8 @@ public class PlayerMovement : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.name == "wall")
+        if (collision.gameObject.tag == "wall")
         {
-          
             collisionwall = true;
         }
         

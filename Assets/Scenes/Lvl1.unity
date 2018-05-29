@@ -238,6 +238,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1778755392771662, guid: cee76c388e5c72943aab80f331bdbd49, type: 2}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54663177324409180, guid: cee76c388e5c72943aab80f331bdbd49, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cee76c388e5c72943aab80f331bdbd49, type: 2}
@@ -477,8 +481,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475397885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -1.4, z: 0}
-  m_LocalScale: {x: 3.9680357, y: 3.8305063, z: 1}
+  m_LocalPosition: {x: -0.1, y: 0.4, z: 0}
+  m_LocalScale: {x: 2.6319618, y: 2.7101476, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -608,7 +612,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -764890204
+  randomSeed: 1677495752
   InitialModule:
     serializedVersion: 3
     enabled: 1

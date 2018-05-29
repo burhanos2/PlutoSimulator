@@ -10,12 +10,12 @@ public class SelectorHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	   if (Input.GetKeyDown (KeyCode.LeftArrow))
+	   if (Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             select -= 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             select += 1;
         }
@@ -37,12 +37,12 @@ public class SelectorHandler : MonoBehaviour {
 
             if(select == 0)
             {
-                    transform.position = new Vector3(0, 2.5f, 0);
+                    transform.position = new Vector3(0.01f, 2.94f, 0);
             }
 
             if(select == 1)
             {
-            transform.position = new Vector3(0, 0, 0);
+            transform.position = new Vector3(-0.05f, -0.92f, 0);
             }
 
             //////////////////////////////////////////
