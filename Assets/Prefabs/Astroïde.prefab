@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 58582091756919992}
   m_Layer: 0
   m_Name: "Astro\xEFde"
-  m_TagString: Untagged
+  m_TagString: aster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,3 +111,4 @@ MonoBehaviour:
   player: {fileID: 1462076343579612, guid: a270674cfb4969341941f011a4f68c5f, type: 2}
   speed: -0.1
   Hearts: {fileID: 114893166532338480, guid: bf57a67d3286df243a610b4cc91695dd, type: 2}
+  hits: 0

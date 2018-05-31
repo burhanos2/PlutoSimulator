@@ -9,8 +9,8 @@ public class Astroïde_rij : MonoBehaviour
     SpriteRenderer m_SpriteRenderer;
     public GameObject player;
     public float speed = 0.1f;
-  
-    private int hp = 5;
+    private bool hits = false;
+
     public Image Hearts;
     // Use this for initialization
     void Start()
@@ -32,21 +32,30 @@ public class Astroïde_rij : MonoBehaviour
 
         Destroy(this.gameObject);
     }
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "PlutoPlayer")
+
+        if (collision.gameObject.tag == "PlutoPlayer" && hits == false)
         {
-            Destroy(this.gameObject);
-            GameObject thePlayer = GameObject.Find("PlutoPlayer");
+
+
+            GameObject thePlayer = GameObject.FindGameObjectWithTag("PlutoPlayer");
             PlayerMovement playerScript = thePlayer.GetComponent<PlayerMovement>();
-            playerScript.leventjes = playerScript.leventjes - 1;
+            playerScript.leventjes -= 1;
             GameObject.Find("Hearts").GetComponent<Animator>().SetInteger("levens", playerScript.leventjes);
             m_SpriteRenderer.color = Color.red;
             player.GetComponent<PlayerMovement>().geraakt();
+            hits = true;
+            if (hits)
+            {
+                GameObject hitsound = GameObject.FindGameObjectWithTag("soundhit");
+                Getting_hit hitScri = hitsound.GetComponent<Getting_hit>();
+                hitScri.Get_hit.Play();
+            }
+            Destroy(this.gameObject);
         }
         if (collision.gameObject.name == "Defence(Clone)")
         {
-
             Destroy(this.gameObject);
         }
     }
