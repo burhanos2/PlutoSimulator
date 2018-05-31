@@ -5,13 +5,13 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
 
-    public float richting;
+    public float rotation;
     
 
 	// Use this for initialization
 	void Start ()
     {
-        richting = GameObject.Find("PlutoPlayer").transform.localEulerAngles.z;
+        rotation = GameObject.Find("PlutoPlayer").transform.localEulerAngles.z;
         
 
     }
@@ -21,28 +21,24 @@ public class BulletController : MonoBehaviour
     {
         Destroy(gameObject, 0.8f);
 
-        if (richting == 180)
+        if (rotation == 180)
         { 
-        transform.position = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z);
-
+            transform.position = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z);
         }
 
-        else if (richting == 0 || richting == 360)
-        {
+        //else if (rotation == 0 || rotation == 360)
+        //{
+        //    transform.position = new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z);
+        //}
 
-            transform.position = new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z);
-        }
+        //else if (rotation == 270)
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+        //}
 
-        else if (richting == 270)
-        {
-
-            transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
-        }
-
-        else if (richting == 90)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
-        }
-  
+        //else if (rotation == 90)
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
+        //}
     }
 }
