@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     public float speedDown = 20;
     public  int leventjes = 5;
     private bool jetpackaan;
+    //public AudioSource Get_hit;
 
     SpriteRenderer m_SpriteRenderer;
     private Rigidbody2D force;
@@ -23,7 +24,14 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-    
+
+        //GameObject asteroid = GameObject.FindGameObjectWithTag("aster");
+        //AstroïdeMovement com = asteroid.GetComponent<AstroïdeMovement>();
+        //if(com.hits)
+        //{
+        //    Get_hit.Play();
+        //}
+
         if (leventjes <= 0)
         {
             SceneManager.LoadScene("Death");

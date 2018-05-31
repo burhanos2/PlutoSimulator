@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletSpawner : PlayerMovement
 {
-
+    public AudioSource shoot_sound;
     public Transform firePoint;
     public GameObject Bullet;
 
@@ -23,9 +23,7 @@ public class BulletSpawner : PlayerMovement
         if(Input.GetKeyDown (KeyCode.X))
         {
             Instantiate(Bullet, firePoint.position, firePoint.rotation);
-
-            
-
+            shoot_sound.Play();
         }
         
 

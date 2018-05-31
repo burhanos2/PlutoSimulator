@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SelectorHandler : MonoBehaviour {
     private int select;
-
-	
-	// Update is called once per frame
-	void Update ()
+    public AudioSource select_beep;
+  
+ 
+    // Update is called once per frame
+    void Update ()
     {
 	   if (Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -33,27 +34,38 @@ public class SelectorHandler : MonoBehaviour {
             select = 0;
         }
 
-        ////////////
+        /////////////////
 
             if(select == 0)
             {
-                    transform.position = new Vector3(0.01f, 2.94f, 0);
+                if (this.transform.position != new Vector3(0.01f, 2.94f, 0))
+                {
+                transform.position = new Vector3(0.01f, 2.94f, 0);
+                select_beep.Play();
+                }
             }
 
             if(select == 1)
             {
-            transform.position = new Vector3(-0.05f, -0.92f, 0);
+                if (this.transform.position != new Vector3(-0.05f, -0.92f, 0))
+                {
+                transform.position = new Vector3(-0.05f, -0.92f, 0);
+                select_beep.Play();
+                }
             }
 
             //////////////////////////////////////////
-
+            
 
         if (Input.GetKeyDown (KeyCode.X))
         {
 
-            if(select == 0)
+            
+            
+            if (select == 0)
             {
                 // go to game
+                
                 SceneManager.LoadScene("Lvl1");
             }
 
@@ -61,9 +73,16 @@ public class SelectorHandler : MonoBehaviour {
             else
             {
                 //credits
+                
                 SceneManager.LoadScene("Credits");
             }
 
         }
+
+        
+
     }
+
+    
+    
 }
