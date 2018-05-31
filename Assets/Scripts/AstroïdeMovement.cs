@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AstroïdeMovement : MonoBehaviour
 {
-
+    
     SpriteRenderer m_SpriteRenderer;
     public GameObject player;
     public float speed = 0.1f;
@@ -31,21 +31,22 @@ public class AstroïdeMovement : MonoBehaviour
        
         Destroy(this.gameObject);
     }
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "PlutoPlayer")
-        {   
+       
+        if (collision.gameObject.tag == "PlutoPlayer")
+        {
+           
             Destroy(this.gameObject);
-            GameObject thePlayer = GameObject.Find("PlutoPlayer");
+            GameObject thePlayer = GameObject.FindGameObjectWithTag("PlutoPlayer");
             PlayerMovement playerScript = thePlayer.GetComponent<PlayerMovement>();
-            playerScript.leventjes = playerScript.leventjes - 1;
+            playerScript.leventjes -=1;
             GameObject.Find("Hearts").GetComponent<Animator>().SetInteger("levens", playerScript.leventjes);
             m_SpriteRenderer.color = Color.red;
             player.GetComponent<PlayerMovement>().geraakt();
         }
         if (collision.gameObject.name == "Defence(Clone)")
         {
-
             Destroy(this.gameObject);
         }
     }

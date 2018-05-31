@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4998759530236888}
   - component: {fileID: 33710571229590012}
-  - component: {fileID: 135528189592135144}
   - component: {fileID: 23554732498751914}
   - component: {fileID: 114577375015777046}
+  - component: {fileID: 58676693595298226}
   m_Layer: 0
   m_Name: "Astro\xEFde spawner"
   m_TagString: Untagged
@@ -82,6 +82,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1934637048613054}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!58 &58676693595298226
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1934637048613054}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &114577375015777046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,15 +114,3 @@ MonoBehaviour:
   check: 0
   spawnThreshold: 5
   muur: 0
---- !u!135 &135528189592135144
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1934637048613054}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

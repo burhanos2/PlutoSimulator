@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4507260695331052}
   - component: {fileID: 33729715696251444}
-  - component: {fileID: 135244560575942296}
   - component: {fileID: 23695487045708306}
   - component: {fileID: 114063577330358426}
+  - component: {fileID: 58582091756919992}
   m_Layer: 0
   m_Name: "Astro\xEFde"
   m_TagString: Untagged
@@ -82,6 +82,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1424043504909160}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!58 &58582091756919992
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424043504909160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &114063577330358426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,15 +111,3 @@ MonoBehaviour:
   player: {fileID: 1462076343579612, guid: a270674cfb4969341941f011a4f68c5f, type: 2}
   speed: -0.1
   Hearts: {fileID: 114893166532338480, guid: bf57a67d3286df243a610b4cc91695dd, type: 2}
---- !u!135 &135244560575942296
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1424043504909160}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
