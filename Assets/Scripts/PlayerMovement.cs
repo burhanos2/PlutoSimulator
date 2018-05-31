@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     public float speedLeft = -3;
     public float speedRight = -20;
     public float speedUp = 3;
-    public float speedDown = 700;
+    public float speedDown = 20;
     public  int leventjes = 5;
     private bool jetpackaan;
 
