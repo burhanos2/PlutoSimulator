@@ -10,28 +10,17 @@ public class PlayerMovement : MonoBehaviour {
     public float speedDown = 20;
     public  int leventjes = 5;
     private bool jetpackaan;
-    //public AudioSource Get_hit;
 
     SpriteRenderer m_SpriteRenderer;
     private Rigidbody2D force;
     public GameObject player;
     // Use this for initialization
     void Start () {
-
         force = GetComponent<Rigidbody2D>();
-
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-        //GameObject asteroid = GameObject.FindGameObjectWithTag("aster");
-        //AstroïdeMovement com = asteroid.GetComponent<AstroïdeMovement>();
-        //if(com.hits)
-        //{
-        //    Get_hit.Play();
-        //}
-
         if (leventjes <= 0)
         {
             SceneManager.LoadScene("Death");
@@ -39,30 +28,18 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             force.AddForce(transform.right * speedRight);
-            //Vector3 temp = transform.rotation.eulerAngles;
-            //temp.z = 180.0f;
-            //transform.rotation = Quaternion.Euler(temp);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             force.AddForce(transform.right * speedLeft);
-            //Vector3 temp = transform.rotation.eulerAngles;
-            //temp.z = 180.0f;
-            //transform.rotation = Quaternion.Euler(temp);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             force.AddForce(transform.up * speedUp);
-            //vector3 temp = transform.rotation.eulerangles;
-            //temp.z = 270.0f;
-            //transform.rotation = quaternion.euler(temp);
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             force.AddForce(transform.up * speedDown);
-            //Vector3 temp = transform.rotation.eulerAngles;
-            //temp.z = 90.0f;
-            //transform.rotation = Quaternion.Euler(temp);
         }
     }
     IEnumerator Example()
