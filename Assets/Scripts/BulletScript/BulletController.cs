@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-
+    public GameObject Bullet;
     public float rotation;
     
 
@@ -25,20 +25,5 @@ public class BulletController : MonoBehaviour
         { 
             transform.position = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z);
         }
-
-        //else if (rotation == 0 || rotation == 360)
-        //{
-        //    transform.position = new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z);
-        //}
-
-        //else if (rotation == 270)
-        //{
-        //    transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
-        //}
-
-        //else if (rotation == 90)
-        //{
-        //    transform.position = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
-        //}
     }
 }

@@ -9,7 +9,7 @@ public class SelectorHandler : MonoBehaviour {
   
  
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
 	   if (Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow))
         {

@@ -4053,7 +4053,7 @@ MonoBehaviour:
   player: {fileID: 948120469}
   shoot_sound: {fileID: 628569801}
   firePoint: {fileID: 2030456190}
-  Bullet: {fileID: 1839097559188110, guid: 37b566b8774fb4f4b9439740572d84bb, type: 2}
+  Bullet: {fileID: 1035496180281890, guid: 37b566b8774fb4f4b9439740572d84bb, type: 2}
 --- !u!1 &1013241230
 GameObject:
   m_ObjectHideFlags: 0
@@ -4615,9 +4615,13 @@ GameObject:
   - component: {fileID: 1254926418}
   - component: {fileID: 1254926417}
   - component: {fileID: 1254926416}
+  - component: {fileID: 1254926420}
+  - component: {fileID: 1254926419}
+  - component: {fileID: 1254926421}
+  - component: {fileID: 1254926422}
   m_Layer: 0
   m_Name: NEPTUNE
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4693,6 +4697,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1254926419
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254926415}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.28904924, y: -0.75456303}
+  - {x: 0.28910825, y: -0.7082222}
+  - {x: 0.08110081, y: -1.3452591}
+  - {x: -0.09973027, y: -0.9429289}
+  - {x: -0.17883502, y: -1.1553477}
+  - {x: -0.32032487, y: -1.3072181}
+  - {x: -0.39201123, y: -1.0825913}
+  - {x: -0.54083365, y: -1.4733131}
+  - {x: -0.6144042, y: -1.0898585}
+  - {x: -0.70905024, y: -1.2284747}
+  - {x: -0.7844227, y: -1.0899873}
+  - {x: -0.95977145, y: -0.6578243}
+--- !u!58 &1254926420
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254926415}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.28612292, y: 0.07387681}
+  serializedVersion: 2
+  m_Radius: 1.017433
+--- !u!50 &1254926421
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254926415}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &1254926422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254926415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c026710429a5744f9db9d61354dc967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 0}
+  rotation: 0
+  BOOM: 0
 --- !u!1 &1270169470
 GameObject:
   m_ObjectHideFlags: 0

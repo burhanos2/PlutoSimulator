@@ -8,6 +8,8 @@ TagManager:
   - PlutoPlayer
   - aster
   - soundhit
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update() {
         if (leventjes <= 0)
         {
             SceneManager.LoadScene("Death");

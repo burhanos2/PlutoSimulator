@@ -20,7 +20,7 @@ public class AstroïdeMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y - randomdirection, transform.position.z);
         player = GameObject.Find("PlutoPlayer");
