@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
-    public float speedLeft = -3;
-    public float speedRight = -20;
-    public float speedUp = 3;
-    public float speedDown = 20;
+    //public float speedLeft = -3;
+    //public float speedRight = -20;
+    //public float speedUp = 3;
+    //public float speedDown = 20;
     public  int leventjes = 5;
     private bool jetpackaan;
 
@@ -20,27 +20,38 @@ public class PlayerMovement : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update() {
+	void Update()
+    {
         if (leventjes <= 0)
         {
             SceneManager.LoadScene("Death");
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+
+
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            force.AddForce(transform.right * speedRight);
+            force.velocity = new Vector3(25, 0, 0);
+
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            force.AddForce(transform.right * speedLeft);
+            force.velocity = new Vector3(-25, 0, 0);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
-            force.AddForce(transform.up * speedUp);
+            force.velocity = new Vector3(0, 25, 0);
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if  (Input.GetKey(KeyCode.DownArrow))
         {
-            force.AddForce(transform.up * speedDown);
+            force.velocity = new Vector3(0, -25, 0);
         }
+        else
+        {
+            force.velocity = new Vector3(0, 0, 0);
+        }
+
+
+
     }
     IEnumerator Example()
     {

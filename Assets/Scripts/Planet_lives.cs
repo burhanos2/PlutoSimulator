@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Bullet_hit : BulletController
+public class Planet_lives : MonoBehaviour
 {
+    public AudioSource Neptune_hit;
+
     public int BOOM;
+    public Text healthDisplay;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            DestroyObject(Bullet);
-            BOOM +=1;
-            print(BOOM);
+            BOOM -=1;
+            Neptune_hit.Play();
         }
     }
     // Use this for initialization
@@ -22,9 +25,10 @@ public class Bullet_hit : BulletController
 	}
 	
 	// Update is called once per frame
-	void Update()
+	void FixedUpdate()
     {
-        if (BOOM >= 400)
+        healthDisplay.text = "Health: " + BOOM;
+        if (BOOM <= 0)
         {
             SceneManager.LoadScene("Next Level");
         }

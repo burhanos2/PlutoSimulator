@@ -20,7 +20,7 @@ public class BulletSpawner : PlayerMovement
 
       //  if (Input.GetKeyDown (KeyCode.Space))
 
-        if(Input.GetKeyDown (KeyCode.X))
+        if(Input.GetKeyDown (KeyCode.Space ))
         {
             Instantiate(Bullet, firePoint.position, firePoint.rotation);
             shoot_sound.Play();

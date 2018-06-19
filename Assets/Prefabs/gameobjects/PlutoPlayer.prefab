@@ -99,10 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece026d0911e2744ca80a736e19a09a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedLeft: -3
-  speedRight: -20
-  speedUp: 3
-  speedDown: 700
   leventjes: 5
   player: {fileID: 0}
 --- !u!212 &212504403315068438

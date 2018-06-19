@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4013086994149642}
   - component: {fileID: 212858901022639422}
   - component: {fileID: 114068320233760934}
-  - component: {fileID: 61944666739073870}
+  - component: {fileID: 114503576383535852}
+  - component: {fileID: 68078547371913074}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -36,14 +37,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1035496180281890}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: -3.1650407, y: 0.92206264, z: 0}
+  m_LocalPosition: {x: 1.4644287, y: -3.4972417, z: 0}
   m_LocalScale: {x: -4.9, y: -4.9, z: -4.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
---- !u!61 &61944666739073870
-BoxCollider2D:
+--- !u!68 &68078547371913074
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,18 +56,19 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.82, y: 0.59}
-    newSize: {x: 3.6, y: 3.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.82, y: 0.59}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.28469896, y: 0.09281562}
+  - {x: -0.18233253, y: 0.061815903}
+  - {x: -0.05859579, y: 0.10943519}
+  - {x: -0.05538405, y: 0.17301622}
+  - {x: 0.23605278, y: 0.08792784}
+  - {x: 0.29085854, y: 0.02041836}
+  - {x: -0.000111959416, y: -0.093077734}
+  - {x: -0.15144533, y: -0.02496398}
+  - {x: -0.36360335, y: -0.029717026}
+  - {x: -0.34272397, y: 0.06645276}
+  - {x: -0.2721946, y: 0.09281552}
 --- !u!114 &114068320233760934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +82,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 0}
   rotation: 0
+--- !u!114 &114503576383535852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035496180281890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d33ba9087052be48a3972fdba272be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Neptune_hit: {fileID: 0}
 --- !u!212 &212858901022639422
 SpriteRenderer:
   m_ObjectHideFlags: 1

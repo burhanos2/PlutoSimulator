@@ -43,7 +43,7 @@ public class ObjectSpawner : MonoBehaviour
         }
         else
         {
-            Vector3 spawnPosition = new Vector3(10, 12, 0);
+            Vector3 spawnPosition = new Vector3(15, 12, 0);
             Instantiate(cubePrefab, spawnPosition, Quaternion.identity);
             spawnTimer = 0;
         }
