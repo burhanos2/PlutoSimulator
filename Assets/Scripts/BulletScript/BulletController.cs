@@ -12,18 +12,16 @@ public class BulletController : MonoBehaviour
 	void Start ()
     {
         rotation = GameObject.Find("PlutoPlayer").transform.localEulerAngles.z;
-
+        Destroy(gameObject, 0.8f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, 0.8f);
-
-        if (rotation == 180)
-        { 
+      
+        
             transform.position = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z);
-        }
+        
         
     }
 }

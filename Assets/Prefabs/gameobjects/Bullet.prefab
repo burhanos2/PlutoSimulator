@@ -93,7 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d33ba9087052be48a3972fdba272be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Neptune_hit: {fileID: 0}
 --- !u!212 &212858901022639422
 SpriteRenderer:
   m_ObjectHideFlags: 1
