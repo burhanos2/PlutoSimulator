@@ -16,7 +16,7 @@ public class AstroïdeMovement : MonoBehaviour
     void Start () {
         InvokeRepeating("DestroyAtTime", 5.0f, 10.0f);
         randomdirection = Random.Range(Random.Range(0.70f , 1.50f), 0.01f);
-       
+        Destroy(gameObject, 1.2f);
     }
 
     // Update is called once per frame
@@ -28,11 +28,7 @@ public class AstroïdeMovement : MonoBehaviour
           
        
     }
-    private void DestroyAtTime()
-    {
-       
-        Destroy(this.gameObject);
-    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
 

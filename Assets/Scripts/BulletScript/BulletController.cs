@@ -12,7 +12,6 @@ public class BulletController : MonoBehaviour
 	void Start ()
     {
         rotation = GameObject.Find("PlutoPlayer").transform.localEulerAngles.z;
-        
 
     }
 
@@ -25,5 +24,6 @@ public class BulletController : MonoBehaviour
         { 
             transform.position = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z);
         }
+        
     }
 }
