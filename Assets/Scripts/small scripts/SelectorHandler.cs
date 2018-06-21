@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SelectorHandler : MonoBehaviour {
     //private int select;
-    public AudioSource select_beep;
+   //  public AudioSource select_beep;
   
  
     // Update is called once per frame
