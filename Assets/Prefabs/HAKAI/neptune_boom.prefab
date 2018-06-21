@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4232958608394826}
   - component: {fileID: 212401452176709200}
   m_Layer: 0
-  m_Name: neptune boom
+  m_Name: neptune_boom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

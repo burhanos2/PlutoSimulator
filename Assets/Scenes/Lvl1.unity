@@ -4031,6 +4031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cb6fa201038ec4a932fa2fc64e45bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: {fileID: 1277311612913550, guid: 5a91af9f4851c8549a4d431ebbfe8f2c, type: 2}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &948120474 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4750012483850538, guid: a270674cfb4969341941f011a4f68c5f,
@@ -4702,6 +4704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c026710429a5744f9db9d61354dc967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: {fileID: 1036170907032500, guid: dcfd1c741d381624fa19e6397f95eaac, type: 2}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
   Neptune_hit: {fileID: 1534781799}
   BOOM: 300
   healthDisplay: {fileID: 948147957}

@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class Planet_lives : MonoBehaviour
 {
+    public GameObject effect;
+    int DO_IT = 1;
+    public Quaternion rotation = Quaternion.identity;
+
     Collider2D m_collider;
     public AudioSource Neptune_hit;
     public static bool speed = true;
@@ -35,6 +39,9 @@ public class Planet_lives : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate()
     {
+        Vector3 pos = new Vector3(transform.position.x - 0.1f, transform.position.y - 0.1f, transform.position.z);
+        rotation.eulerAngles = new Vector3(0, 0, 0);
+
         healthDisplay.text = "Health: " + BOOM;
         if (BOOM <= 0)
         {
@@ -43,6 +50,15 @@ public class Planet_lives : MonoBehaviour
             gameObject.GetComponent<Renderer>().enabled = false;
             m_collider.enabled = false;
             BOOM = 0;
+
+            if (DO_IT == 1)
+            {
+                DO_IT -= 1;
+                Instantiate(effect, pos, rotation);
+
+            }
+
+
         }
     }
 }
