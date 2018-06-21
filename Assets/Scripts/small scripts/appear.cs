@@ -6,7 +6,7 @@ public class appear : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameObject.GetComponent<Renderer>().enabled = true;
+        gameObject.GetComponent<Renderer>().enabled = false;
     }
 	
     

@@ -69,6 +69,7 @@ public class SelectorHandler : MonoBehaviour {
                 // go to game
                 
                 SceneManager.LoadScene("Lvl1");
+                PlayerMovement.Died = false;
             //}
 
 

@@ -361,6 +361,11 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114932402304011168, guid: a270674cfb4969341941f011a4f68c5f,
+        type: 2}
+      propertyPath: Movement
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
@@ -729,7 +734,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1126392318
+  randomSeed: -1168656152
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4026,24 +4031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cb6fa201038ec4a932fa2fc64e45bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationspeed: 0
---- !u!95 &948120473
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 948120469}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6f7cfc6c0dfa7a64abdf77d4e6e9d274, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &948120474 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4750012483850538, guid: a270674cfb4969341941f011a4f68c5f,
@@ -4060,6 +4047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7366a70f2cdd81a4abc0273d5d03772a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Movement: 0
   leventjes: 5
   player: {fileID: 948120469}
   shoot_sound: {fileID: 628569801}
@@ -4586,7 +4574,6 @@ GameObject:
   - component: {fileID: 1254926417}
   - component: {fileID: 1254926416}
   - component: {fileID: 1254926420}
-  - component: {fileID: 1254926419}
   - component: {fileID: 1254926421}
   - component: {fileID: 1254926422}
   - component: {fileID: 1254926423}
@@ -4669,33 +4656,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &1254926419
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1254926415}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.28904924, y: -0.75456303}
-  - {x: 0.28910825, y: -0.7082222}
-  - {x: 0.08110081, y: -1.3452591}
-  - {x: -0.09973027, y: -0.9429289}
-  - {x: -0.17883502, y: -1.1553477}
-  - {x: -0.32032487, y: -1.3072181}
-  - {x: -0.39201123, y: -1.0825913}
-  - {x: -0.54083365, y: -1.4733131}
-  - {x: -0.6144042, y: -1.0898585}
-  - {x: -0.70905024, y: -1.2284747}
-  - {x: -0.7844227, y: -1.0899873}
-  - {x: -0.95977145, y: -0.6578243}
 --- !u!58 &1254926420
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4759,7 +4719,6 @@ MonoBehaviour:
   x: 17.81
   y: 0
   z: 0
-  plus: 0.05
   high: 3.32
   low: -5.67
 --- !u!1 &1270169470

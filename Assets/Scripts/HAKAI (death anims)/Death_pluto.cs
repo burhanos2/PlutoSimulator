@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Death_pluto : MonoBehaviour {
+    Collider2D m_collider;
 
-
-    // THIS SECTION IS DEATH ANIMATIONS
-    public float animationspeed = 0f;
     void Start()
     {
-        GetComponent<Animator>().speed = animationspeed;
+        m_collider = GetComponent<Collider2D>();
     }
 
-    public void ChildKill()
+    public void Kill_All_Children()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -24,9 +22,11 @@ public class Death_pluto : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (Input.GetKeyDown (KeyCode.K))
+		if (PlayerMovement.Died == true)
         {
-            ChildKill();
+            Kill_All_Children();
+            gameObject.GetComponent<Renderer>().enabled = false;
+            m_collider.enabled = false;
         }
 	}
 }

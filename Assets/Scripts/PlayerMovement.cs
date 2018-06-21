@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
-    //public float speedLeft = -3;
-    //public float speedRight = -20;
-    //public float speedUp = 3;
-    //public float speedDown = 20;
-    public  int leventjes = 5;
+    public bool Movement;
+    public  int leventjes = 5; 
     private bool jetpackaan;
 
+    public static bool Died = false;
     SpriteRenderer m_SpriteRenderer;
     private Rigidbody2D force;
     public GameObject player;
@@ -19,29 +17,38 @@ public class PlayerMovement : MonoBehaviour {
         force = GetComponent<Rigidbody2D>();
     }
 	
+    void Die()
+    {
+         SceneManager.LoadScene("Death");
+    }
+
 	// Update is called once per frame
 	void Update()
     {
         if (leventjes <= 0)
         {
-            SceneManager.LoadScene("Death");
+            Invoke("Die", 5);
+            Movement = false;
+            Died = true;
         }
 
 
-        if (Input.GetKey(KeyCode.RightArrow))
+
+
+        if (Input.GetKey(KeyCode.RightArrow) && Movement == true)
         {
             force.velocity = new Vector3(25, 0, 0);
 
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) && Movement == true)
         {
             force.velocity = new Vector3(-25, 0, 0);
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow) && Movement == true)
         {
             force.velocity = new Vector3(0, 25, 0);
         }
-        else if  (Input.GetKey(KeyCode.DownArrow))
+        else if  (Input.GetKey(KeyCode.DownArrow) && Movement == true)
         {
             force.velocity = new Vector3(0, -25, 0);
         }
