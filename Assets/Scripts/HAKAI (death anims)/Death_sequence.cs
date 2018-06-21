@@ -14,3 +14,4 @@ public class Death_sequence : MonoBehaviour {
 		
 	}
 }
+// USE INVOKE

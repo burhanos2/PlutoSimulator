@@ -553,6 +553,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212520578256545072, guid: 120d67bb4af19194da9d5ea9ba2ef9c8,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72a5b57704377274e976b7228c619288,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 120d67bb4af19194da9d5ea9ba2ef9c8, type: 2}
   m_IsPrefabParent: 0
@@ -572,6 +578,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fec96709b9ef9044ac0e8d679676e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &707916813
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 707916811}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5eb82a7b63af3764eaa6954594e052c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &788727647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,12 +1511,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d1e037b17d1f9ae4c9958c825eccc045, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48ae2c4bb381bca449c09c8e381ded4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.98, y: 0.61}
+  m_Size: {x: 6.4, y: 3.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1521,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526bd386edb170940ab801c2d972ed11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: -1.68
+  x: -1.78
   y: -1.06
   z: 0
   plus: 0.01
