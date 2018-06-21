@@ -1,9 +1,6 @@
-de enemy bestaat maar kan niet geraakt worden
+
 contrast mockup
-betere muziek
-meer ontwikkelen
-mensen lezen vaak niet de controls
-controls voelen raar aan
-het shild kan verwarrend zijn
-power ups (levens toeveoegen)
-sterrenmuur duidelijker
+
+het shild kan verwarrend zijn(sterrenmuur duidelijker)
+
+niet doorheen kunnen schieten
