@@ -29,6 +29,15 @@ public class Planet_lives : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        if (SelectorHandler.select == 0)
+        {
+            BOOM = 300;
+        }
+        else if (SelectorHandler.select == 1)
+        {
+            BOOM = 450;
+        }
+
         m_collider = GetComponent<Collider2D>();
     }
     
