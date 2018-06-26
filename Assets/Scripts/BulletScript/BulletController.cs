@@ -13,6 +13,12 @@ public class BulletController : MonoBehaviour
     {
         rotation = GameObject.Find("PlutoPlayer").transform.localEulerAngles.z;
         Destroy(gameObject, 0.8f);
+        Invoke("delet", 0.799f);
+    }
+
+    void delet()
+    {
+        BulletSpawner.BulletCount -= 1;
     }
 
     // Update is called once per frame

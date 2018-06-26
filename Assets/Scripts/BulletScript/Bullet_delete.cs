@@ -10,7 +10,7 @@ public class Bullet_delete : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy"|| collision.gameObject.name == "Defence(Clone)")
         {
-            
+            BulletSpawner.BulletCount -= 1;
             Destroy(gameObject);
         }
 

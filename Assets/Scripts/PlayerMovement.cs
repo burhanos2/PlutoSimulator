@@ -8,10 +8,17 @@ public class PlayerMovement : MonoBehaviour {
     public  int leventjes = 5; 
     private bool jetpackaan;
 
+    public KeyCode Up;
+    public KeyCode Down;
+    public KeyCode Left;
+    public KeyCode Right;
+
     public static bool Died = false;
     SpriteRenderer m_SpriteRenderer;
+    SpriteRenderer m_SpriteRenderer2;
     private Rigidbody2D force;
     public GameObject player;
+    public GameObject player2;
     // Use this for initialization
     void Start () {
         force = GetComponent<Rigidbody2D>();
@@ -35,20 +42,20 @@ public class PlayerMovement : MonoBehaviour {
 
 
 
-        if (Input.GetKey(KeyCode.RightArrow) && Movement == true)
+        if (Input.GetKey(Right) && Movement == true)
         {
             force.velocity = new Vector3(25, 0, 0);
 
         }
-        else if (Input.GetKey(KeyCode.LeftArrow) && Movement == true)
+        else if (Input.GetKey(Left) && Movement == true)
         {
             force.velocity = new Vector3(-25, 0, 0);
         }
-        else if (Input.GetKey(KeyCode.UpArrow) && Movement == true)
+        else if (Input.GetKey(Up) && Movement == true)
         {
             force.velocity = new Vector3(0, 25, 0);
         }
-        else if  (Input.GetKey(KeyCode.DownArrow) && Movement == true)
+        else if  (Input.GetKey(Down) && Movement == true)
         {
             force.velocity = new Vector3(0, -25, 0);
         }
@@ -63,11 +70,14 @@ public class PlayerMovement : MonoBehaviour {
     IEnumerator Example()
     {
 
-        player = GameObject.Find("PlutoPlayer");
+        player = GameObject.FindWithTag("PlutoPlayer");
+        player2 = GameObject.FindWithTag("PlutoPlayer2");
         m_SpriteRenderer = player.GetComponent<SpriteRenderer>();
+        m_SpriteRenderer2 = player2.GetComponent<SpriteRenderer>();
 
         yield return new WaitForSeconds(1);
         m_SpriteRenderer.color = Color.white;
+        m_SpriteRenderer2.color = Color.white;
     }
     public void geraakt()
     {

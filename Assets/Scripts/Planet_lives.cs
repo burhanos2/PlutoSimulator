@@ -10,6 +10,8 @@ public class Planet_lives : MonoBehaviour
     int DO_IT = 1;
     public Quaternion rotation = Quaternion.identity;
 
+    public static bool enemy_dead = false;
+
     Collider2D m_collider;
     public AudioSource Neptune_hit;
     public static bool speed = true;
@@ -50,6 +52,8 @@ public class Planet_lives : MonoBehaviour
             gameObject.GetComponent<Renderer>().enabled = false;
             m_collider.enabled = false;
             BOOM = 0;
+            enemy_dead = true;
+            BulletSpawner.shootable = false;
 
             if (DO_IT == 1)
             {

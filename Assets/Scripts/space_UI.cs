@@ -28,7 +28,7 @@ public class space_UI : MonoBehaviour {
 	void Update () 
 {
 
-        bool Boob = Planet_lives.speed;
+        bool Planspeed = Planet_lives.speed;
  
         Scene scene = SceneManager.GetActiveScene();
 
@@ -38,12 +38,12 @@ public class space_UI : MonoBehaviour {
         }
 
         // not being executed
-        else if (Boob == false && scene.name == "Lvl1")
+        else if (Planspeed == false && scene.name == "Lvl1")
         {
             plus = 0f;
         }
 
-        else if (Boob == true && scene.name == "Lvl1")
+        else if (Planspeed == true && scene.name == "Lvl1")
         {
             plus = 0.05f;
         }
