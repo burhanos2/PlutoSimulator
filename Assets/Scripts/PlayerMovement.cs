@@ -20,8 +20,18 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject player;
     public GameObject player2;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         force = GetComponent<Rigidbody2D>();
+
+
+        player = GameObject.FindWithTag("PlutoPlayer");
+        player2 = GameObject.FindWithTag("PlutoPlayer2");
+        m_SpriteRenderer = player.GetComponent<SpriteRenderer>();
+        if(player2 != null)
+        { 
+        m_SpriteRenderer2 = player2.GetComponent<SpriteRenderer>();
+        }
     }
 	
     void Die()
@@ -69,15 +79,12 @@ public class PlayerMovement : MonoBehaviour {
     }
     IEnumerator Example()
     {
-
-        player = GameObject.FindWithTag("PlutoPlayer");
-        player2 = GameObject.FindWithTag("PlutoPlayer2");
-        m_SpriteRenderer = player.GetComponent<SpriteRenderer>();
-        m_SpriteRenderer2 = player2.GetComponent<SpriteRenderer>();
-
         yield return new WaitForSeconds(1);
         m_SpriteRenderer.color = Color.white;
-        m_SpriteRenderer2.color = Color.white;
+        if(player2 != null)
+        {
+            m_SpriteRenderer2.color = Color.white;
+        }
     }
     public void geraakt()
     {

@@ -17,18 +17,24 @@ public class Astroïde_rij : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Destroy(gameObject, 2f);  
+        Destroy(gameObject, 2f);
 
+        player = GameObject.FindWithTag("PlutoPlayer");
+        player2 = GameObject.FindWithTag("PlutoPlayer2");
+        if (player2 != null)
+        {
+            m_SpriteRenderer2 = player2.GetComponent<SpriteRenderer>();
+
+        }
+
+        m_SpriteRenderer = player.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = new Vector3(transform.position.x - 0.39f, transform.position.y, transform.position.z);
-        player = GameObject.FindWithTag("PlutoPlayer");
-        player2 = GameObject.FindWithTag("PlutoPlayer2");
-        m_SpriteRenderer = player.GetComponent<SpriteRenderer>();
-        m_SpriteRenderer2 = player2.GetComponent<SpriteRenderer>();
+  
     }
     private void DestroyAtTime()
     {
@@ -47,8 +53,15 @@ public class Astroïde_rij : MonoBehaviour
             playerScript.leventjes -= 1;
             GameObject.Find("Hearts").GetComponent<Animator>().SetInteger("levens", playerScript.leventjes);
             m_SpriteRenderer.color = Color.red;
-            m_SpriteRenderer2.color = Color.red;
+            if (player2 != null)
+            {
+                m_SpriteRenderer2.color = Color.red;
+            }
             player.GetComponent<PlayerMovement>().geraakt();
+            //if (player2 != null)
+            //{
+            //    player2.GetComponent<PlayerMovement>().geraakt();
+            //}
             hits = true;
             if (hits)
             {
