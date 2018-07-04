@@ -79,6 +79,7 @@ public class PlayerMovement : MonoBehaviour {
     }
     IEnumerator Example()
     {
+        Highscore.timeS -= 1000;
         yield return new WaitForSeconds(1);
         m_SpriteRenderer.color = Color.white;
         if(player2 != null)

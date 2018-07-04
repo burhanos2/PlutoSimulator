@@ -7,6 +7,7 @@ public class appear : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gameObject.GetComponent<Renderer>().enabled = false;
+        Highscore.timeS = 10000;
     }
 	
     

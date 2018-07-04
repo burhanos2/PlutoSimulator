@@ -9,7 +9,7 @@ public class BulletSpawner : PlayerMovement
     public GameObject Bullet;
 
     public static bool shootable = true;
-    public static int BulletCount= 0;
+    public static int BulletCount = 0;
 	// Use this for initialization
 	void Start () {
         shoot();
@@ -28,7 +28,7 @@ public class BulletSpawner : PlayerMovement
                 shoot_sound.Play();
             }
         //}
-             Invoke("shoot", 0.1f);    
+             Invoke("shoot", 0.14f);    
     }
 
 

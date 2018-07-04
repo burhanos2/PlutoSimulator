@@ -44,9 +44,9 @@ public class SelectorHandler : MonoBehaviour {
         if (select == 0)
         {
             x = -1.297534f;
-            if (this.transform.position != new Vector3(x, 1.4f, 0))
+            if (this.transform.position != new Vector3(x, 0.61f, 0))
             {
-                transform.position = new Vector3(x, 1.4f, 0);
+                transform.position = new Vector3(x, 0.61f, 0);
                 select_beep.Play();
             }
         }
@@ -54,9 +54,9 @@ public class SelectorHandler : MonoBehaviour {
         if (select == 1)
         {
             x = 1.5f;
-            if (this.transform.position != new Vector3(x, 1.4f, 0))
+            if (this.transform.position != new Vector3(x, 0.61f, 0))
             {
-                transform.position = new Vector3(x, 1.4f, 0);
+                transform.position = new Vector3(x, 0.61f, 0);
                 select_beep.Play();
             }
         }

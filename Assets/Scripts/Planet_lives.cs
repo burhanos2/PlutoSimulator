@@ -13,6 +13,9 @@ public class Planet_lives : MonoBehaviour
     public static bool enemy_dead = false;
 
     Collider2D m_collider;
+    public Collider2D player1col;
+    public Collider2D player2col;
+
     public AudioSource Neptune_hit;
     public static bool speed = true;
 
@@ -27,7 +30,7 @@ public class Planet_lives : MonoBehaviour
         }
     }
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         if (SelectorHandler.select == 0)
         {
@@ -39,6 +42,13 @@ public class Planet_lives : MonoBehaviour
         }
 
         m_collider = GetComponent<Collider2D>();
+
+        m_collider.enabled = true;
+        player1col.enabled = true;
+        if (player2col != null)
+        { 
+        player2col.enabled = true;
+        }
     }
     
     
@@ -47,9 +57,14 @@ public class Planet_lives : MonoBehaviour
         SceneManager.LoadScene("Next Level");
     }
 
+    
+
 	// Update is called once per frame
 	void FixedUpdate()
     {
+            if (Input.GetKeyDown(KeyCode.P))
+        { BOOM = 10; }
+    
         Vector3 pos = new Vector3(transform.position.x - 0.1f, transform.position.y - 0.1f, transform.position.z);
         rotation.eulerAngles = new Vector3(0, 0, 0);
 
@@ -57,9 +72,14 @@ public class Planet_lives : MonoBehaviour
         if (BOOM <= 0)
         {
             speed = false;
-            Invoke("ToWin", 5);
+            Invoke("ToWin", 5); 
             gameObject.GetComponent<Renderer>().enabled = false;
             m_collider.enabled = false;
+            player1col.enabled = false;
+            if (player2col != null)
+            {
+                player2col.enabled = false;
+            }
             BOOM = 0;
             enemy_dead = true;
             BulletSpawner.shootable = false;
