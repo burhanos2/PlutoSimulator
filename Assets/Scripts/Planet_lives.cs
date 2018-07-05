@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Planet_lives : MonoBehaviour
 {
+    public Slider slider;
+
     public GameObject effect;
     int DO_IT = 1;
     public Quaternion rotation = Quaternion.identity;
@@ -23,7 +25,6 @@ public class Planet_lives : MonoBehaviour
     public static bool speed = true;
 
     public int BOOM;
-    public Text healthDisplay;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
@@ -40,11 +41,13 @@ public class Planet_lives : MonoBehaviour
         {
             BOOM = 350;
             maxboom = 350;
+            slider.maxValue = maxboom;
         }
         else if (SelectorHandler.select == 1)
         {
             BOOM = 500;
             maxboom = 500;
+            slider.maxValue = maxboom;
         }
 
         m_collider = GetComponent<Collider2D>();
@@ -69,6 +72,11 @@ public class Planet_lives : MonoBehaviour
 	void FixedUpdate()
     {
 
+        slider.value = BOOM;
+
+        if (slider.value <= 0)
+        { slider.value = 0; }
+
         timer += Time.deltaTime;
         //if (Input.GetKeyDown(KeyCode.P))
         //{
@@ -79,7 +87,7 @@ public class Planet_lives : MonoBehaviour
         Vector3 pos = new Vector3(transform.position.x - 0.1f, transform.position.y - 0.1f, transform.position.z);
         rotation.eulerAngles = new Vector3(0, 0, 0);
 
-        healthDisplay.text = "Health: " + BOOM;
+        
         if (BOOM <= 0)
         {
             speed = false;

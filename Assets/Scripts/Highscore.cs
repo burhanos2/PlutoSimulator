@@ -17,7 +17,7 @@ public class Highscore : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-    
+        Hscore.text = "HIGHSCORE: " + PlayerPrefs.GetInt("Highscore", 0);
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public class Highscore : MonoBehaviour
         {
             timeS -= Time.deltaTime;
         }
+
         Mathf.Round(timeS);
         score_int = (int)timeS;
 
@@ -37,17 +38,16 @@ public class Highscore : MonoBehaviour
         if (Planet_lives.enemy_dead == true && score_int > PlayerPrefs.GetInt("Highscore", 0))
         {
             PlayerPrefs.SetInt("Highscore", score_int);
+            Hscore.text = "HIGHSCORE: " + PlayerPrefs.GetInt("Highscore", 0);
             newscore = true;
         }
 
         if (newscore == false)
         {
-            Hscore.text = "HIGHSCORE: " + PlayerPrefs.GetInt("Highscore", 0);
             New.text = " ";
         }
         else if (newscore == true)
         {
-            Hscore.text = "HIGHSCORE: " + PlayerPrefs.GetInt("Highscore", 0);
             New.text = "NEW HIGHSCORE";
         }   
     }

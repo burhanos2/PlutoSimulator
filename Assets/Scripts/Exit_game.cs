@@ -49,7 +49,7 @@ public class Exit_game : MonoBehaviour
             Stime = 0f;
         }
 
-        if (Stime >= 2.0f)
+        if (Stime >= 1f)
         {
             if (scene.name == "Lvl1" || scene.name == "Next level")
             {

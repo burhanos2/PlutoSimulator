@@ -157,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dimitri van manen
+  m_Text: Dimitri van Manen
 --- !u!222 &41849626
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -179,8 +179,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: -505}
-  m_SizeDelta: {x: 411.34, y: 75}
+  m_AnchoredPosition: {x: 822, y: -503.75}
+  m_SizeDelta: {x: 556, y: 72.493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &107176173
 GameObject:
@@ -507,7 +507,6 @@ MonoBehaviour:
   Hscore: {fileID: 1612487840}
   New: {fileID: 1510771150}
   Score: {fileID: 408927362}
-  newscore: 0
 --- !u!114 &408927362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,8 +932,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -626.9999, y: -480.0066}
-  m_SizeDelta: {x: 217, y: 128}
+  m_AnchoredPosition: {x: -639, y: -489}
+  m_SizeDelta: {x: 193, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1017142791
 GameObject:
@@ -1009,8 +1008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -659, y: -236}
-  m_SizeDelta: {x: 210, y: 159}
+  m_AnchoredPosition: {x: -680, y: -226}
+  m_SizeDelta: {x: 166, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1510771148
 GameObject:
