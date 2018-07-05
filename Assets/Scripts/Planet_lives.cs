@@ -10,6 +10,9 @@ public class Planet_lives : MonoBehaviour
     int DO_IT = 1;
     public Quaternion rotation = Quaternion.identity;
 
+    float timer;
+    int maxboom;
+
     public static bool enemy_dead = false;
 
     Collider2D m_collider;
@@ -25,6 +28,7 @@ public class Planet_lives : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            timer = 0;
             BOOM -=1;
             Neptune_hit.Play();
         }
@@ -34,11 +38,13 @@ public class Planet_lives : MonoBehaviour
     {
         if (SelectorHandler.select == 0)
         {
-            BOOM = 300;
+            BOOM = 350;
+            maxboom = 350;
         }
         else if (SelectorHandler.select == 1)
         {
-            BOOM = 450;
+            BOOM = 500;
+            maxboom = 500;
         }
 
         m_collider = GetComponent<Collider2D>();
@@ -62,9 +68,14 @@ public class Planet_lives : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate()
     {
-            if (Input.GetKeyDown(KeyCode.P))
-        { BOOM = 10; }
-    
+
+        timer += Time.deltaTime;
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    BOOM = 10;
+        //    PlayerPrefs.SetInt("Highscore", 0);
+        //}
+
         Vector3 pos = new Vector3(transform.position.x - 0.1f, transform.position.y - 0.1f, transform.position.z);
         rotation.eulerAngles = new Vector3(0, 0, 0);
 
@@ -93,5 +104,12 @@ public class Planet_lives : MonoBehaviour
 
 
         }
+
+        if(BOOM < maxboom && timer >= 2.0f)
+        {
+            timer -= 0.5f;
+            BOOM += 1;
+        }
+
     }
 }

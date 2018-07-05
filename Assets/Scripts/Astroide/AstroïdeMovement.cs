@@ -18,7 +18,7 @@ public class AstroïdeMovement : MonoBehaviour
 
     // Use this for initialization
     void Start () {
-        randomdirection = Random.Range(Random.Range(0.70f , 1.50f), 0.01f);
+        randomdirection = Random.Range(Random.Range(0.4f , 1.1f), 0.005f);
         Destroy(gameObject, 7.5f);
 
         player = GameObject.FindWithTag("PlutoPlayer");

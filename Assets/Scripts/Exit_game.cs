@@ -11,12 +11,13 @@ public class Exit_game : MonoBehaviour
     public GameObject playername;
     public GameObject playername2;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 
         BulletSpawner.BulletCount = 0;
         BulletSpawner.shootable = true;
         Planet_lives.enemy_dead = false;
-        
+
         scene = SceneManager.GetActiveScene();
 
         // putting this in for 1P support
@@ -27,6 +28,12 @@ public class Exit_game : MonoBehaviour
             Destroy(playername2);
         }
         //1P support
+
+        //DELETE HIGHSCORE MESSAGE
+        if (scene.name == "Lvl1")
+        {
+            Highscore.newscore = false;
+        }
 	}
 
     // Update is called once per frame
