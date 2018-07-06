@@ -8,22 +8,39 @@ public class BulletSpawner : PlayerMovement
     public Transform firePoint;
     public GameObject Bullet;
 
+    public static bool shootable = true;
+    public static int BulletCount = 0;
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update() {
+        shoot();
+    }
 
-       
 
-      //  if (Input.GetKeyDown (KeyCode.Space))
 
-        if(Input.GetKeyDown (KeyCode.Space ))
+    void shoot()
+    {
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+            if (shootable == true)
+            {
+                Instantiate(Bullet, firePoint.position, firePoint.rotation);
+                BulletCount += 1;
+                shoot_sound.Play();
+            }
+        //}
+             Invoke("shoot", 0.14f);    
+    }
+
+
+    // Update is called once per frame
+    void Update() {
+        
+        if (BulletCount >= 3)
+        { shootable = false; }
+
+        if (shootable == false && BulletCount <= 2 && Planet_lives.enemy_dead == false)
         {
-            Instantiate(Bullet, firePoint.position, firePoint.rotation);
-            shoot_sound.Play();
+            shootable = true;
         }
         
 

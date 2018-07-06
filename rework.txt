@@ -1,0 +1,13 @@
+incoming damage
+-outgoing damage
+dodging
+
+
+
+outgoing damage has been put on a megaman ruleset with touhou controls.
+while you can hold to shoot almost as fast as possible, only 3 bullets may exist at a time to punish missing and reward risk by getting up close to shoot faster
+
+
+BUG: 
+Getting hit on 1P is a bit bugged but dieing is not
+

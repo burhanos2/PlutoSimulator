@@ -33,7 +33,7 @@ public class ObjectSpawner : MonoBehaviour
 
          check = Random.Range(0, 100);
 
-        if (check <= 10 && muur == false)
+        if (check <= 21 && muur == false)
         {
             muur = true;
             Vector3 spawnPositionWall = new Vector3(Random.Range(-14, 0), Random.Range(-10, 10), 0);
@@ -70,7 +70,7 @@ public class ObjectSpawner : MonoBehaviour
         yield return new WaitForSeconds(2);
         
         spawnThreshold = 1;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         Destroy(GameObject.Find("Defence(Clone)"));
         muur = false;
     }

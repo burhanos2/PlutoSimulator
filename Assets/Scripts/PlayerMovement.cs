@@ -4,44 +4,68 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
-    //public float speedLeft = -3;
-    //public float speedRight = -20;
-    //public float speedUp = 3;
-    //public float speedDown = 20;
-    public  int leventjes = 5;
+    public bool Movement;
+    public  int leventjes = 5; 
     private bool jetpackaan;
 
+    public KeyCode Up;
+    public KeyCode Down;
+    public KeyCode Left;
+    public KeyCode Right;
+
+    public static bool Died = false;
     SpriteRenderer m_SpriteRenderer;
+    SpriteRenderer m_SpriteRenderer2;
     private Rigidbody2D force;
     public GameObject player;
+    public GameObject player2;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         force = GetComponent<Rigidbody2D>();
+
+
+        player = GameObject.FindWithTag("PlutoPlayer");
+        player2 = GameObject.FindWithTag("PlutoPlayer2");
+        m_SpriteRenderer = player.GetComponent<SpriteRenderer>();
+        if(player2 != null)
+        { 
+        m_SpriteRenderer2 = player2.GetComponent<SpriteRenderer>();
+        }
     }
 	
+    void Die()
+    {
+         SceneManager.LoadScene("Death");
+    }
+
 	// Update is called once per frame
 	void Update()
     {
         if (leventjes <= 0)
         {
-            SceneManager.LoadScene("Death");
+            Invoke("Die", 5);
+            Movement = false;
+            Died = true;
         }
 
 
-        if (Input.GetKey(KeyCode.RightArrow))
+
+
+        if (Input.GetKey(Right) && Movement == true)
         {
             force.velocity = new Vector3(25, 0, 0);
 
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(Left) && Movement == true)
         {
             force.velocity = new Vector3(-25, 0, 0);
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(Up) && Movement == true)
         {
             force.velocity = new Vector3(0, 25, 0);
         }
-        else if  (Input.GetKey(KeyCode.DownArrow))
+        else if  (Input.GetKey(Down) && Movement == true)
         {
             force.velocity = new Vector3(0, -25, 0);
         }
@@ -55,12 +79,13 @@ public class PlayerMovement : MonoBehaviour {
     }
     IEnumerator Example()
     {
-
-        player = GameObject.Find("PlutoPlayer");
-        m_SpriteRenderer = player.GetComponent<SpriteRenderer>();
-
+        Highscore.timeS -= 1000;
         yield return new WaitForSeconds(1);
         m_SpriteRenderer.color = Color.white;
+        if(player2 != null)
+        {
+            m_SpriteRenderer2.color = Color.white;
+        }
     }
     public void geraakt()
     {
